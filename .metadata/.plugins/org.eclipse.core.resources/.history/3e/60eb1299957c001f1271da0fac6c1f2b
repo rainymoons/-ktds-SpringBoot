@@ -1,0 +1,21 @@
+package com.ktdsuniversity.edu.hello_spring.bbs.impl;
+
+import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
+import org.springframework.context.annotation.Import;
+
+import com.ktdsuniversity.edu.hello_spring.bbs.dao.BoardDao;
+import com.ktdsuniversity.edu.hello_spring.bbs.dao.impl.BoardDaoImpl;
+
+@MybatisTest
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+@Import(BoardDaoImpl.class)
+public class BoardDaoImplTest {
+
+	@Autowired
+	BoardDao boardDao;
+	
+	
+}

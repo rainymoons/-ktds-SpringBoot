@@ -1,0 +1,17 @@
+package com.ktdsuniversity.edu.hello_spring.bbs.service.BoardImpl;
+
+import org.springframework.stereotype.Service;
+
+import com.ktdsuniversity.edu.hello_spring.bbs.service.BoardService;
+import com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardListVO;
+
+@Service
+public class BoardServiceImpl implements BoardService {
+	
+	@Override
+	public BoardListVO getAllBoard() {
+
+		return null;
+	}
+
+}

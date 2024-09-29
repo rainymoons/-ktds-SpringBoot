@@ -1,0 +1,32 @@
+package com.ktdsuniversity.edu.hello_spring.bbs.service;
+
+import org.mockito.BDDMockito;
+import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
+
+import com.ktdsuniversity.edu.hello_spring.bbs.dao.BoardDao;
+import com.ktdsuniversity.edu.hello_spring.bbs.service.boardImpl.BoardServiceImpl;
+
+@MybatisTest
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+@Import(BoardServiceImpl.class)
+public class BoardServiceImplTest {
+	
+	@Autowired
+	BoardService boardService;
+	
+	@MockBean
+	private BoardDao boardDao;
+	
+	public void testCreateNewBoard() {
+		//WriteBoardVO writeBoardVO = new WriteBoardVO();
+		BDDMockito.given(boardDao.insertNewBoard(null));
+		
+		
+	
+	}
+}

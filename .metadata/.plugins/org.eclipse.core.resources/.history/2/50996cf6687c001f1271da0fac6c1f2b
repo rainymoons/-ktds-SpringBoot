@@ -1,0 +1,51 @@
+package com.ktdsuniversity.edu.hello_spring.bbs.service.impl;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.BDDMockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
+
+import com.ktdsuniversity.edu.hello_spring.bbs.dao.BoardDao;
+import com.ktdsuniversity.edu.hello_spring.bbs.dao.impl.BoardDaoImpl;
+import com.ktdsuniversity.edu.hello_spring.bbs.service.BoardService;
+import com.ktdsuniversity.edu.hello_spring.bbs.service.BoardImpl.BoardServiceImpl;
+
+// MyBatis 테스트가 아니므로 SpringBootTest (Service만 테스트)
+// Spring Application의 Bean을 생성해주는 Annotation. Service의 여러 DI들을 가져온다.
+@SpringBootTest
+
+// JUnit5를 사용하기 위한 설정. -> 버전이 올라가면서 Default로 JUnit5를 사용할 수 있게 된 듯.
+// @ExtendWith(SpringExtension.class)
+
+// Test하고자 하는 클래스와 Test에 필요한 클래스들을 Import한다. 
+// BoardServiceImpl.class : BoardServiceImpl을 테스트하기 위해 Import
+// BoardDaoImpl.class : BoardServiceImpl에 BoardDaoImpl을 Autowired하기 위해 Import. -> 데이터를 변형하기 위한 것.
+@Import( {BoardServiceImpl.class, BoardDaoImpl.class} ) // -> 여러개를 가져올때는 ,가 아니라 { } 배열 기호 사용.
+public class BoardServiceImplTest {
+
+	// 1. BoardServiceImpl.class의 인스턴스를 boardService에 넣는다.
+	@Autowired
+	private BoardService boardService;
+	
+	/**
+	 *JUnit5 테스트를 위해 BoardServiceImpl에 가짜 인스턴스를 DI시킨다.
+	 */
+	
+	// 2. BoardDaoImpl.class의 인스턴스를 boardService에 넣는다. (정확히는 BoardDao) 이때는 @Autowired가 아님.
+	@MockBean // 가짜 인스턴스 생성. 보드서비스임플의 boardDao를 넣으면(Autowired한) raw 데이터가 훼손되므로 실제 DB에 연결시키지 않음.
+	private BoardDao boardDao;
+	
+	@Test
+	public void testGetAllBoard() {
+		
+		// 1. boardDao.selectBoardAllCount()가 반환시킬 값을 명시한다.
+		BDDMockito.given(boardDao.selectBoardAllCount()).willReturn(3);
+		
+		// 2. boardDao.selectAllBoard()가 반환시킬 값을 명시한다.
+		
+		
+		
+	}
+}

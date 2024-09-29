@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: hello-spring
+
+  # 데이터베이스 연결을 위한 설정
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: SPRING_BOOT
+    password: 1234
+  
+  # JSP를 사용하기 위해 JSP 파일들의 경로를 설정.
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+# mybatis 설정 파일의 경로 지정
+mybatis:
+  # mybatis-config.xm 파일의 위치를 지정한다.
+  config-location: classpath:mybatis/mybatis-config.xml

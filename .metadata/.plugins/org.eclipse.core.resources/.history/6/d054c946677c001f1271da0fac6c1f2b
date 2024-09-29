@@ -1,0 +1,18 @@
+package com.ktdsuniversity.edu.hello_spring.bbs.service.impl;
+
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
+
+import com.ktdsuniversity.edu.hello_spring.bbs.service.BoardImpl.BoardServiceImpl;
+
+// MyBatis 테스트가 아니므로 SpringBootTest (Service만 테스트)
+// Spring Application의 Bean을 생성해주는 Annotation. Service의 여러 DI들을 가져온다.
+@SpringBootTest
+// JUnit5를 사용하기 위한 설정. -> 버전이 올라가면서 Default로 JUnit5를 사용할 수 있게 된 듯.
+// @ExtendWith(SpringExtension.class)
+// Test하고자 하는 클래스와 Test에 필요한 클래스들을 Import한다. 
+@Import(BoardServiceImpl.class, BoardDaoImpl.class)
+public class BoardServiceImplTest {
+
+	
+}
