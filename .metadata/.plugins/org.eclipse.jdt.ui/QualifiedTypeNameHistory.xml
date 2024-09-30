@@ -15,4 +15,5 @@
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
     <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.vo.ModifyBoardVO"/>
 </qualifiedTypeNameHistroy>

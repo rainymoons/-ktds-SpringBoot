@@ -44,7 +44,7 @@ public class BoardController {
 	}
 	
 	@GetMapping("/board/view")
-	public ModelAndView viewOneBoard(@RequestParam (name="id", required=true) int id) {
+	public ModelAndView viewOneBoard(@RequestParam int id) {
 		BoardVO boardVO = boardService.getOneBoard(id);
 		
 		ModelAndView modelAndView = new ModelAndView();

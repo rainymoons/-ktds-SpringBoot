@@ -13,6 +13,8 @@ INDEX VERSION 1.134
 /hello-spring_chapter_5/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3735387790.index
 /hello-spring_chapter_04_test/src/main/java
+/Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3697726257.index
+/hello-spring_chapter_07/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/257106274.index
 /hello-spring_chapter_03/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2550916967.index

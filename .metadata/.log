@@ -6126,3 +6126,762 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/hello-spring_
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2024-09-30 08:31:42.359
 !MESSAGE Cannot determine URI for '/hello-spring_chapter_assign/src/main/resources/static/css/common.css'.
+!SESSION 2024-09-30 08:49:05.572 -----------------------------------------------
+eclipse.buildId=4.25.0.202409101855
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/moomin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/moomin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-09-30 08:49:07.377
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-09-30 08:49:13.395
+!MESSAGE Logback config file: /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-09-30 08:49:13.599
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-09-30 08:49:13.599
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-09-30 08:49:13.749
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-09-30 08:49:13.749
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.365
+!MESSAGE Boot project ADDED: hello-spring
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.366
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.392
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-30 08:49:16.410
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_21.0.4.v20240802-1551/jre/bin/java
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-XX:ErrorFile=/Users/moomin/Documents/Workspace/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1727653756410
+-Dlanguageserver.hover-timeout=225
+-jar
+/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.springframework.tooling.boot.ls_1.57.0.202409101848/servers/spring-boot-language-server/spring-boot-language-server-1.57.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.411
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-30 08:49:16.414
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 75290
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.976
+!MESSAGE Boot project ADDED: hello-spring_chapter_02
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.976
+!MESSAGE Boot project ADDED: hello-spring_chapter_03
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.976
+!MESSAGE Boot project ADDED: hello-spring_chapter_04
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.976
+!MESSAGE Boot project ADDED: hello-spring_chapter_04_test
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.976
+!MESSAGE Boot project ADDED: hello-spring_chapter_05
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.976
+!MESSAGE Boot project ADDED: hello-spring_chapter_05_test
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.977
+!MESSAGE Boot project ADDED: hello-spring_chapter_06
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 08:49:16.977
+!MESSAGE Boot project ADDED: hello-spring_chapter_assign0927
+
+!ENTRY org.eclipse.jface 2 0 2024-09-30 09:17:20.304
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-09-30 09:17:20.304
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 10:42:19.249
+!MESSAGE Classpath changed for project: hello-spring_chapter_07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 10:42:20.959
+!MESSAGE Classpath changed for project: hello-spring_chapter_07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 10:42:20.960
+!MESSAGE Boot project ADDED: hello-spring_chapter_07
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-30 14:18:52.350
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-30 14:18:52.366
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-30 14:18:52.366
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-30 14:18:52.366
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-30 14:18:52.368
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-30 14:18:52.369
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2024-09-30 15:33:20.858
+!MESSAGE Disconnected before saving. https://bugs.eclipse.org/bugs/show_bug.cgi?id=569286 org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor BoardController.java
+!STACK 0
+java.lang.IllegalStateException: Disconnected before saving. https://bugs.eclipse.org/bugs/show_bug.cgi?id=569286 org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor BoardController.java
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.disconnectEditor(AbstractTextEditor.java:7200)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.dispose(AbstractTextEditor.java:4339)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.dispose(AbstractDecoratedTextEditor.java:404)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.dispose(JavaEditor.java:2676)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.dispose(CompilationUnitEditor.java:1517)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.invalidate(CompatibilityPart.java:264)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.destroy(CompatibilityPart.java:421)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:977)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:939)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.uninject(InjectorImpl.java:182)
+	at org.eclipse.e4.core.internal.di.Requestor.uninject(Requestor.java:177)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:89)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:103)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.removeListenersTo(EclipseContext.java:487)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.uninject(ContextInjectionFactory.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:943)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:206)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:131)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:73)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:316)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1411)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1341)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closeSiblingParts(StackRenderer.java:1730)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closeSiblingParts(StackRenderer.java:1687)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.lambda$38(StackRenderer.java:1521)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4660)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1622)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1645)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1630)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4427)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4003)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+	Suppressed: java.lang.IllegalStateException: isDirty check after disconnect
+		at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7249)
+		at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3502)
+		at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3475)
+		at org.eclipse.ui.ide.IDE$1.run(IDE.java:1456)
+		at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+		at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1444)
+		at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+		at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+		at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+		at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+		at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+		at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+		at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+		at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4382)
+		at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4005)
+		... 19 more
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 16:13:37.564
+!MESSAGE Classpath changed for project: hello-spring_chapter_07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 16:13:37.708
+!MESSAGE Classpath changed for project: hello-spring_chapter_07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 16:13:38.766
+!MESSAGE Classpath changed for project: hello-spring_chapter_07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 16:14:36.299
+!MESSAGE Classpath changed for project: hello-spring_chapter_07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 16:14:36.361
+!MESSAGE Classpath changed for project: hello-spring_chapter_07
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-30 16:14:37.772
+!MESSAGE Classpath changed for project: hello-spring_chapter_07
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.799
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.isCactusJunitTest(WebDeployableArtifactUtil.java:259)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:166)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:254)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.800
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.802
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:276)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:254)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.802
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.802
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:280)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:254)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.802
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.805
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.isCactusJunitTest(WebDeployableArtifactUtil.java:259)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:166)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:407)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:331)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.805
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.805
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:276)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:407)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:331)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.805
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.805
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:280)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:407)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:331)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.805
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.806
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.isCactusJunitTest(WebDeployableArtifactUtil.java:259)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:166)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.getLaunchConfigurations(ServerLaunchShortcut.java:91)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:489)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:501)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:338)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.807
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.807
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:276)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.getLaunchConfigurations(ServerLaunchShortcut.java:91)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:489)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:501)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:338)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.807
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.807
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:280)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.getLaunchConfigurations(ServerLaunchShortcut.java:91)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:489)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:501)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:338)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.807
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.808
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.isCactusJunitTest(WebDeployableArtifactUtil.java:259)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:166)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:254)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.808
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.808
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:276)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:254)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.808
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.808
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:280)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:254)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.808
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.809
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.isCactusJunitTest(WebDeployableArtifactUtil.java:259)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:166)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:407)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:331)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.809
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.810
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:276)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:407)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:331)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.810
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.810
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:280)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.checkProperty(ServerPropertyTester.java:50)
+	at org.eclipse.wst.server.ui.internal.ServerPropertyTester.test(ServerPropertyTester.java:35)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:273)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:468)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:407)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:331)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.810
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.811
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.isCactusJunitTest(WebDeployableArtifactUtil.java:259)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:166)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.getLaunchConfigurations(ServerLaunchShortcut.java:91)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:489)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:501)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:338)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.811
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.811
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:276)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.getLaunchConfigurations(ServerLaunchShortcut.java:91)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:489)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:501)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:338)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.811
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+
+!ENTRY org.eclipse.jst.jee.ui 4 0 2024-09-30 16:39:11.811
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+!STACK 1
+Java Model Exception: Error in Java Model (code 979): Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1452)
+	at org.eclipse.jdt.internal.core.JavaProject.findElement(JavaProject.java:1442)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getClassNameForType(WebDeployableArtifactUtil.java:319)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getServletClassName(WebDeployableArtifactUtil.java:280)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactUtil.getModuleObject(WebDeployableArtifactUtil.java:175)
+	at org.eclipse.jst.jee.ui.internal.deployables.WebDeployableArtifactAdapterFactory.getModuleArtifact(WebDeployableArtifactAdapterFactory.java:33)
+	at org.eclipse.wst.server.core.model.ModuleArtifactAdapterDelegate.getModuleArtifacts(ModuleArtifactAdapterDelegate.java:48)
+	at org.eclipse.wst.server.core.internal.ModuleArtifactAdapter.getModuleArtifacts(ModuleArtifactAdapter.java:185)
+	at org.eclipse.wst.server.core.internal.ServerPlugin.hasModuleArtifact(ServerPlugin.java:1298)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.getLaunchConfigurations(ServerLaunchShortcut.java:91)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:489)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:501)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:338)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:258)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:147)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 979 2024-09-30 16:39:11.811
+!MESSAGE Invalid path: '/hello-spring_chapter_07/src/main/webapp/WEB-INF/views/board/boardList.jsp'
