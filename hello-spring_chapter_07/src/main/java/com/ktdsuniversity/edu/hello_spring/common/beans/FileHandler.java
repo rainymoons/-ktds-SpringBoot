@@ -96,14 +96,16 @@ public class FileHandler {
 		
 		// 다운로드시킬 파일 이름의 인코딩을 변경한다. (파일 다운로드에만 한해서 인코딩을 변경한다.)
 		try {
+			// 파일명 인코딩(UTF-8에서 ISO-8859-1로 변환 -> 최근에는 URLEncoder.encode 고려
 			originFileName = new String(originFileName.getBytes("UTF-8"), "ISO-8859-1");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 		// HTTP Response에 파일을 첨부해서 전송할 건데 파일의 이름은 "~~~"이다. (실제 파일 이름)
+		// 파일 다운로드 헤더 설정
 		header.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + originFileName);
 		
-		// 4. 브라우저에게 파일을 전송한다.
+		// 4. 파일 리소스를 준비하고 브라우저에게 파일을 전송한다.
 		InputStreamResource resource = null;
 		
 		try {
@@ -137,6 +139,7 @@ public class FileHandler {
 		File file = new File(this.baseDirectory, fileName);
 		
 		if (file.exists() && file.isFile()) {
+			// 파일 삭제 성공 시 true 반환
 			if (file.delete()) {
 				System.out.println("파일이 성공적으로 삭제되었습니다: " + fileName);
 			} else {
