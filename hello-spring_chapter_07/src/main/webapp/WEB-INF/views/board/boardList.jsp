@@ -39,7 +39,7 @@
 				 	-> choose when otherwise
 				  -->
 			  	<c:choose>
-			  		<c:when test="${empty boardListVO.boardList}"> <!-- 리스트가 비어있다면(아닐경우 not) -->
+			  		<c:when test="${not empty boardListVO.boardList}"> <!-- 리스트가 비어있다면(아닐경우 not) -->
 			  			<c:forEach items="${boardListVO.boardList}" var="board">
 							<tr>
 								<td>${board.id}</td>

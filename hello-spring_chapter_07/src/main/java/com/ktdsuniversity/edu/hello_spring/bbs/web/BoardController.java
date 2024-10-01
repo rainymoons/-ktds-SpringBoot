@@ -1,6 +1,8 @@
 package com.ktdsuniversity.edu.hello_spring.bbs.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +15,14 @@ import com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardListVO;
 import com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO;
 import com.ktdsuniversity.edu.hello_spring.bbs.vo.ModifyBoardVO;
 import com.ktdsuniversity.edu.hello_spring.bbs.vo.WriteBoardVO;
+import com.ktdsuniversity.edu.hello_spring.common.beans.FileHandler;
 
 @Controller
 public class BoardController {
 
+	@Autowired
+	private FileHandler fileHandler;
+	
 	@Autowired
 	private BoardService boardService;
 	
@@ -100,5 +106,14 @@ public class BoardController {
 			return "redirect:/board/view?id" + id;
 		}
 		
+	}
+	
+	@GetMapping("/board/file/download/{id}")
+	public ResponseEntity<Resource> downloadFile(@PathVariable int id) {
+		
+		// 1. 다운로드할 파일의 이름을 알기 위해 게시글을 조회한다.
+		BoardVO boardVO = this.boardService.getOneBoard(id, false);
+		
+		return this.fileHandler.downloadFile(boardVO.getFileName(), boardVO.getOriginFileName());
 	}
 }

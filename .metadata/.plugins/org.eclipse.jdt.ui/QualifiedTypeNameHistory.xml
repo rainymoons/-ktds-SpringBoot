@@ -16,4 +16,12 @@
     <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.vo.ModifyBoardVO"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.net.http.HttpHeaders"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
+    <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.Resource"/>
+    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.beans.FileHandler"/>
+    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.vo.StoreResultVO"/>
+    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO"/>
 </qualifiedTypeNameHistroy>

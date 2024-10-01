@@ -19,6 +19,13 @@ pageEncoding="UTF-8"%>
       <label for="viewCnt">조회수</label>
       <div>${boardVO.viewCnt}</div>
 
+      <label for="orginFileName">첨부파일</label>
+      <div>
+        <a href="/board/file/download/${boardVO.id}">
+          ${boardVO.originFileName}
+        </a>
+      </div>
+
       <label for="crtDt">등록일</label>
       <div>${boardVO.crtDt}</div>
 

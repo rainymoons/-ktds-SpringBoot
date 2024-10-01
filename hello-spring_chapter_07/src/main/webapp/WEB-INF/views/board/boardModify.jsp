@@ -6,11 +6,14 @@ pageEncoding="UTF-8"%>
     <meta charset="UTF-8" />
     <title>Insert title here</title>
   </head>
-    <link rel="stylesheet" type="text/css" href="/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="/css/common.css" />
   <body>
     <h1>게시글 수정</h1>
-    <form method="post" action="/board/modify/${boardVO.id}">
-
+    <form
+      method="post"
+      action="/board/modify/${boardVO.id}"
+      enctype="multipart/form-data"
+    >
       <div class="grid">
         <label for="subject">제목</label>
         <input
@@ -20,7 +23,11 @@ pageEncoding="UTF-8"%>
           value="${boardVO.subject}"
         />
         <label for="email">이메일</label>
-        <input type="email" id="email" name="email" value="${boardVO.email}"/>
+        <input type="email" id="email" name="email" value="${boardVO.email}" />
+
+        <label for="file">첨부파일</label>
+        <input id="file" type="file" name="file" />
+
         <label for="content">내용</label>
         <textarea name="content" id="content">${boardVO.content}</textarea>
         <div class="btn-group">

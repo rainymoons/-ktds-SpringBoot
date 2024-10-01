@@ -43,10 +43,10 @@
 		 , 0
 		 , SYSDATE
 		 , SYSDATE
-		 , NULL
-		 , NULL)	
+		 , #{fileName}
+		 , #{originFileName})	
 	</insert>
-	<!-- increaseViewCount는 Update이므로  resultType이 필요하지 않음. parameterType 명시. -->
+	<!-- increaseViewCount는update이므로  resultType이 필요하지 않음. parameterType 명시. -->
 	<update id="increaseViewCount" parameterType = "_int">
 		UPDATE BOARD 
            SET VIEW_CNT = VIEW_CNT + 1
@@ -73,6 +73,10 @@
 		     , CONTENT = #{content}
 		     , EMAIL = #{email}
 		     , MDFY_DT = SYSDATE
+		     <if test='fileName != null and fileName != ""'>
+		     , FILE_NAME = #{fileName} 
+		     , ORIGIN_FILE_NAME = #{originFileName}
+		     </if>
 		 WHERE ID = #{id}    
 	</update>
 	
