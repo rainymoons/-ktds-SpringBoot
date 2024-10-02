@@ -5,7 +5,6 @@
     <fullyQualifiedTypeName name="org.springframework.test.context.junit.jupiter.SpringExtension"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.extension.ExtendWith"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Import"/>
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.dao.impl.BoardDaoImpl"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.vo.WriteBoardVO"/>
     <fullyQualifiedTypeName name="org.mybatis.spring.boot.test.autoconfigure.MybatisTest"/>
@@ -24,4 +23,12 @@
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.beans.FileHandler"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.vo.StoreResultVO"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO"/>
+    <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.Size"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotBlank"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.Email"/>
+    <fullyQualifiedTypeName name="org.mybatis.spring.support.SqlSessionDaoSupport"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 </qualifiedTypeNameHistroy>

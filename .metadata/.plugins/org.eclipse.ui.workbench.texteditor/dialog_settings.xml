@@ -8,6 +8,7 @@
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="validation"/>
 			<item value="update"/>
 			<item value="boardList"/>
 			<item value="autowired"/>
@@ -15,7 +16,6 @@
 			<item value="Autowired"/>
 			<item value="Autowire"/>
 			<item value="boardDaoImpl"/>
-			<item value="render"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -17,6 +17,7 @@ import com.ktdsuniversity.edu.hello_spring.bbs.vo.ModifyBoardVO;
 import com.ktdsuniversity.edu.hello_spring.bbs.vo.WriteBoardVO;
 import com.ktdsuniversity.edu.hello_spring.common.beans.FileHandler;
 
+
 @Controller
 public class BoardController {
 
@@ -78,7 +79,6 @@ public class BoardController {
 		
 		boolean isUpdated = this.boardService.updateOneBoard(modifyBoardVO);
 		
-		//TODO post update process
 		if(isUpdated) {
 			// 성공적으로 수정했다면, 수정한 게시글의 상세조회 페이지로 이동시킨다.
 			return "redirect:/board/view?id=" + id;
@@ -116,4 +116,20 @@ public class BoardController {
 		
 		return this.fileHandler.downloadFile(boardVO.getFileName(), boardVO.getOriginFileName());
 	}
+	
+//	@PostMapping("/board/write")
+//	public String doBoardWrite(@Valid
+//							 , @ModelAttribute BoardVO boardVO
+//							 , BindingResult bindingResult
+//							 , @RequestParam MultipartFile multipartFile
+//							 , Model model) {
+//		if (bindingResult.hasErrors()) {
+//			model.addAttribute("boardVO", boardVO);
+//			return "board/boardWrite";
+//		}
+//		
+//		model.addAttribute("boardVO",boardVO);
+//		return "redirect:/board/list"
+//	}
+	
 }
