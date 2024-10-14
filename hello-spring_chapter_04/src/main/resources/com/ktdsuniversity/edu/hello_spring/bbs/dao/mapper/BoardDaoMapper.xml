@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ktdsuniversity.edu.hello_spring.bbs.BoardDao;">
+<mapper namespace="com.ktdsuniversity.edu.hello_spring.bbs.dao.BoardDao;">
 
 	<select id="selectBoardAllCount" resultType="_int">
 		SELECT COUNT(1)

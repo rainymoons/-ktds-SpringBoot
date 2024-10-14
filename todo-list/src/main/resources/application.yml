@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: todo-list
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: TODO
+    password: TODO
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:com/ktdsuniversity/edu/todo_list/**/dao/mapper/*Mapper.xml

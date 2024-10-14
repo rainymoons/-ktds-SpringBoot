@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktdsuniversity.edu.hello_spring.bbs.dao.BoardDao">
+
+<!-- 타입에는 주요 관심사가 반환시키는 주요 타입을 적는다. -->
+<resultMap id="boardVOMap" 
+		 type="com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO"
+		 autoMapping="true">
+		 <!-- 오토맵핑 = true를 사용해서 아래 컬럼 자동 맵핑되게 설정 . pk는 반드시 필요함. -->
+	<!-- PK 컬럼은 id 태그를 사용한다. -->
+<!-- 	<id column="ID" property="id"></id> -->
+	<!-- 일반 컬럼은 result 태그를 사용한다. -->
+<!-- 	<result column="SUBJECT" property="subject"></result>
+	<result column="CONTENT" property="content"></result>
+	<result column="EMAIL" property="email"></result>
+	<result column="VIEW_CNT" property="viewCnt"></result>
+	<result column="CRT_DT" property="crtDt"></result>
+	<result column="MDFY_DT" property="mdfyDt"></result>
+	<result column="FILE_NAME" property="fileName"></result>
+	<result column="ORIGIN_FILE_NAME" property="originFileName"></result> -->
+	
+	<!-- 1:1 관계의 Has A 인스턴스는 association 태그를 사용한다. -->
+	<association property="memberVO" 
+				 javaType="com.ktdsuniversity.edu.hello_spring.member.vo.MemberVO">
+		 <!-- MemberVO 클래스와 매핑된 MEMBERS 테이블의 PK 컬럼을 id 태그로 사용해야한다. 
+		  	  BoardVO 클래스 내에서 MemberVO 객체를 포함하고 있는 1:1 관계-->
+		<id column="EMAIL" property="email" />
+<!-- 		<result column="NAME" property="name" /> --> <!-- NAME 컬럼을 name 변수에 할당.--> 
+	</association>
+</resultMap>
+	<!-- 사용 할 쿼리를 작성함 -->
+	<!-- BoardDao의 메소드명과 반환타입 -->
+	<select id="selectBoardAllCount" resultType="_int">
+		SELECT COUNT(1)
+		  FROM BOARD B
+		 INNER JOIN MEMBERS M
+		    ON B.EMAIL = M.EMAIL
+	</select>
+	<!-- List 는 경로를 적어줘야 함. join 해야 하므로 더이상 resultType은 사용 불가. -->
+	
+    <!-- <select id="selectAllBoard" resultType="com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO"> -->
+    <select id="selectAllBoard" resultMap="boardVOMap" >
+		SELECT B.ID
+		     , B.SUBJECT
+		     , B.CONTENT
+		     , B.EMAIL
+		     , B.VIEW_CNT
+		     , TO_CHAR(B.CRT_DT, 'YYYY-MM-DD') CRT_DT
+		     , TO_CHAR(B.MDFY_DT, 'YYYY-MM-DD') MDFY_DT
+		     , B.FILE_NAME
+		     , B.ORIGIN_FILE_NAME
+		     , M.NAME 
+		  FROM BOARD B
+		 INNER JOIN MEMBERS M
+		    ON B.EMAIL = M.EMAIL 
+		 ORDER BY B.ID DESC
+    </select>
+    
+    <!-- resultType은 select 에만 씀 insert는 기본적으로 int가 보내짐 -->
+    <insert id="insertNewBoard" parameterType="com.ktdsuniversity.edu.hello_spring.bbs.vo.WriteBoardVO">
+    	INSERT INTO BOARD
+         (ID
+        , SUBJECT
+        , CONTENT
+        , EMAIL
+        , VIEW_CNT
+        , CRT_DT
+        , MDFY_DT
+        , FILE_NAME
+        , ORIGIN_FILE_NAME)
+        VALUES
+         (SEQ_BOARD_PK.NEXTVAL
+        , #{subject}
+        , #{content}
+        , #{email}
+        , 0
+        , SYSDATE
+        , SYSDATE
+        , #{fileName}
+        , #{originFileName})
+    </insert>
+    
+    <update id="updateViewCount" parameterType="_int">
+    	UPDATE BOARD 
+   		   SET VIEW_CNT = VIEW_CNT +1
+  		 WHERE ID = #{_parameter}
+    </update>
+    
+    <!-- <select id="selectOneBoard" parameterType="_it" resultType="com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO"> -->
+    <select id="selectOneBoard" parameterType="_int" resultMap="boardVOMap">
+		SELECT B.ID
+		     , B.SUBJECT
+		     , B.CONTENT
+		     , B.EMAIL
+		     , B.VIEW_CNT
+		     , TO_CHAR(B.CRT_DT, 'YYYY-MM-DD') CRT_DT
+		     , TO_CHAR(B.MDFY_DT, 'YYYY-MM-DD') MDFY_DT
+		     , B.FILE_NAME
+		     , B.ORIGIN_FILE_NAME
+		     , M.NAME 
+		  FROM BOARD B
+		 INNER JOIN MEMBERS M
+		    ON B.EMAIL = M.EMAIL 
+ 		 WHERE B.ID = #{_parameter}
+    </select>
+    
+    <update id="updateOneBoard" parameterType="com.ktdsuniversity.edu.hello_spring.bbs.vo.ModifyBoardVO">
+    	UPDATE BOARD 
+           SET SUBJECT = #{subject}
+             , CONTENT = #{content}
+             , EMAIL = #{email}
+             , MDFY_DT = SYSDATE
+             <if test='fileName != null and fileName != ""'>
+             , FILE_NAME = #{fileName}
+	         , ORIGIN_FILE_NAME = #{originFileName}
+             </if>
+         WHERE ID = #{id}  
+    </update>
+    
+    <delete id="deleteOneBoard" parameterType="_int">
+    	DELETE 
+    	  FROM BOARD
+		 WHERE ID = #{_parameter}
+    </delete>
+    
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktdsuniversity.edu.todo_list.bbs.dao.TodoDao">
+	<!-- 사용 할 쿼리를 작성함 -->
+	<select id="selectAllTodo" resultType="com.ktdsuniversity.edu.todo_list.bbs.vo.TodoVO">
+		SELECT ID
+	         , ISCOMPLETE
+	         , CTT
+	         , TO_CHAR(DEADLINE, 'YYYY-MM-DD') DEADLINE
+	      FROM TODO
+	     ORDER BY ID
+	</select>
+    
+    <insert id="insertNewTodo" parameterType="com.ktdsuniversity.edu.todo_list.bbs.vo.WriteTodoVO">
+    	INSERT INTO TODO
+              (ID
+             , ISCOMPLETE
+             , CTT
+             , DEADLINE)
+             VALUES
+              (TODO_PK_SEQ.NEXTVAL
+             , 0
+             , #{ctt}
+             , TO_DATE(#{deadline}, 'YYYY-MM-DD'))
+    </insert>
+    
+    <update id="updateTodo" parameterType="com.ktdsuniversity.edu.todo_list.bbs.vo.TodoVO">
+    	UPDATE TODO 
+           SET ISCOMPLETE = ISCOMPLETE + 1
+         WHERE ID = #{id}
+    </update>
+    
+    <delete id="deleteTodo" parameterType="com.ktdsuniversity.edu.todo_list.bbs.vo.DeleteTodoVO">
+    	DELETE FROM TODO
+ 		 WHERE ID = #{id}
+    </delete>
+    
+</mapper>

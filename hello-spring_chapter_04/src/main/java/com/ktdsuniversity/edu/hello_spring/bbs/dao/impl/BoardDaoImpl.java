@@ -1,38 +1,29 @@
 package com.ktdsuniversity.edu.hello_spring.bbs.dao.impl;
 
+import com.ktdsuniversity.edu.hello_spring.bbs.dao.BoardDao;
+import com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO;
 import java.util.List;
-
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.ktdsuniversity.edu.hello_spring.bbs.dao.BoardDao;
-import com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO;
-
 @Repository
 public class BoardDaoImpl extends SqlSessionDaoSupport implements BoardDao {
-	
-	@Autowired
-	@Override
-	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
-		// Autowired 됬는지 확인
-		System.out.println("Autowiring sqlSessionTemplate: " + sqlSessionTemplate);
-		super.setSqlSessionTemplate(sqlSessionTemplate);
-	}
-	
-	@Override
-	public int selectBoardAllCount() {
-		// getSqlSession을 통해서 한개의 ROW만 조회를 하겠다. 앞에 namespace를 적어줘서 안전하게 호출
-		return this.getSqlSession()
-				.selectOne("com.ktdsuniversity.edu.hello_spring.bbs.BoardDao.selectBoardAllCount");
-	}
-	
-	@Override
-	public List<BoardVO> selectAllBoard() {
-		return this.getSqlSession()
-				.selectList("com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO.selectAllBoard");
-	}
 
+    @Override
+    @Autowired
+    public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
+        super.setSqlSessionTemplate(sqlSessionTemplate);
+    }
+
+    @Override
+    public int selectBoardAllCount() {
+        return this.getSqlSession().selectOne("com.ktdsuniversity.edu.hello_spring.bbs.BoardDao");
+    }
+
+    @Override
+    public List<BoardVO> selectAllBoard() {
+        return this.getSqlSession().selectList("com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO");
+    }
 }

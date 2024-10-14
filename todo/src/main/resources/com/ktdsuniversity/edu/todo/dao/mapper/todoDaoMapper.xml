@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktdsuniversity.edu.todo.dao.TodoDao">
+	<insert id="insertNewTodoItem" parameterType="com.ktdsuniversity.edu.todo.vo.WriteTodoVO">
+		INSERT INTO TODOBOARD
+		( ID,
+		  SUBJECT,
+		  ISDONE,
+		  DEADLINE)
+		VALUES
+		( SEQ_TODOBOARD_PK.NEXTVAL,
+		  #{subject},
+		  TO_DATE(#{deadline}, 'YYYY-MM-DD'),
+		  0)
+	</insert>
+
+	<delete id="deleteTodoItem" parameterType="_int">
+		DELETE 
+		  FROM TODOBOARD
+		 WHERE ID = #{_parameter}
+	</delete>
+	
+	<select id="selectAllToDo" resultType="com.ktdsuniversity.edu.todo.vo.TodoVO">
+		SELECT ID
+		     , SUBJECT
+		     , ISDONE
+		     , TO_CHAR(DEADLINE, 'YYYY-MM-DD') DEADLINE
+		  FROM TODOBOARD
+	</select>
+	
+	<update id="updateTodoStatus" parameterType="_int">
+		UPDATE TODOBOARD
+		   SET ISDONE = 1
+		 WHERE ID = #{_parameter}  
+	</update>
+</mapper>

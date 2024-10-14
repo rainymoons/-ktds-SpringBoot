@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.right-align {
+	text-align: right;
+}
+
+.horizontal-list {
+	padding: 0;
+	margin: 0;
+}
+
+.horizontal-list li {
+	display: inline-block;
+}
+
+.horizontal-list li a{
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	margin-left: 10px
+}

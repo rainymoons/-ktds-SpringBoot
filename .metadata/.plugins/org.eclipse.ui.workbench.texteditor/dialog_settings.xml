@@ -4,18 +4,18 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Update"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
-			<item value="validation"/>
+			<item value="readMemeber"/>
+			<item value="releasing"/>
+			<item value="real"/>
+			<item value="걸린"/>
+			<item value="\"/>
+			<item value="걸린 시간"/>
+			<item value="아이디 또는 "/>
 			<item value="update"/>
-			<item value="boardList"/>
-			<item value="autowired"/>
-			<item value="Autowiring sql"/>
-			<item value="Autowired"/>
-			<item value="Autowire"/>
-			<item value="boardDaoImpl"/>
 		</list>
 		<list key="replacehistory">
 		</list>

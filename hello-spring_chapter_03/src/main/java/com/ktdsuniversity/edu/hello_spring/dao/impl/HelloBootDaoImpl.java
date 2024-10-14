@@ -1,7 +1,6 @@
 package com.ktdsuniversity.edu.hello_spring.dao.impl;
 
 import org.springframework.stereotype.Repository;
-
 import com.ktdsuniversity.edu.hello_spring.dao.HelloBootDao;
 
 /**

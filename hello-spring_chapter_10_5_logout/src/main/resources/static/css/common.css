@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+div.error {
+  font-size: 0.8rem;
+  color: #a00;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+div.grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: minmax(28px, auto) 28px 320px 1fr;
+  row-gap: 10px;
+}
+
+div.grid-board-list {
+  grid-template-columns: 1fr;
+  grid-template-rows: 28px 28px 1fr 28px;
+}
+
+div.grid-view-board {
+  grid-template-rows: repeat(6, 28px) 320px 1fr;
+}
+
+div.grid-member-regist {
+  grid-template-rows: repeat(4, minmax(28px, auto)) 320px 1fr;
+}
+
+div.grid-member-login {
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 28px 28px 1fr;
+}
+
+div.grid label {
+  padding: 0.7rem;
+  align-self: center;
+}
+
+div.grid > div.btn-group {
+  grid-column: 1 / -1;
+}
+
+div.grid div.right-align {
+  text-align: right;
+}
+
+label {
+  padding-left: 10px;
+}
+
+button,
+input,
+textarea {
+  padding: 10px;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+}
+
+input[type="file"] {
+  padding: 0;
+}
+
+textarea {
+  height: 300px;
+}
+
+.available {
+  background-color: #0f08;
+}
+
+.unusable {
+  background-color: #f008;
+}
+
+ul.horizontal-list {
+  padding: 0;
+  margin: 0;
+}
+
+ul.horizontal-list li {
+  display: inline;
+}

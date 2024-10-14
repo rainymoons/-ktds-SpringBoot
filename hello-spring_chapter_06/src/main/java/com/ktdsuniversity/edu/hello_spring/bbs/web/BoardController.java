@@ -18,21 +18,21 @@ public class BoardController {
 	
 	@GetMapping("/board/list") // http://localhost:8080/board/list
 	public String viewBoardList(Model model) {
-		
+
 		BoardListVO boardListVO = this.boardService.getAllBoard();
-		
+
 		model.addAttribute("boardListVO", boardListVO);
-		
+
 		return "board/boardList";
 	}
-	
+
 	// write 페이지 작성.
 	// getMapping은 post가 안됨. 그렇다고 post로 바꾸면 get에 대한 요청을 처리할 수 없다. -> 별도로 PostMapping을 생성함.
 	@GetMapping("/board/write")
 	public String viewBoardWrtiePage() {
 		return "board/boardWrite";
 	}
-	
+
 	@PostMapping("/board/write")
 	public String doCreateNewBoard(WriteBoardVO writeBoardVO) {
 		boolean isCreate = this.boardService.createNewBoard(writeBoardVO);

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+
+.group {
+	margin: 0 auto;
+	width: 50%
+}
+
+.table {
+  border-collapse: collapse;
+  border: 1px solid #333;
+  width: 100%;
+}
+
+.table > thead > tr > th {
+  border-right: 1px solid #333;
+}
+
+.table > thead > tr > th:first-child {
+  width: 6rem;
+}
+
+.table > thead > tr > th:nth-child(2) {
+  width: 6rem;
+}
+
+.table > thead > tr > th:nth-child(3) {
+  width: 25rem;
+}
+
+.table > thead > tr > th:nth-child(5) {
+  width: 6rem;
+}
+
+.table > thead > tr > th:last-child {
+  width: 6rem;
+}
+
+.table > thead > tr > th:first-child {
+  text-align: center;
+}
+
+.table > thead th {
+  padding: 10px;
+}
+
+.table > tbody > tr > td {
+  border-right: 1px solid #333;
+  border-top: 1px solid #333;
+}
+
+.table > tbody td {
+  padding: 10px;
+  text-align: center;
+}
+
+.table > tbody tr:nth-child(odd) {
+  background-color: rgb(242, 243, 255);
+}
+
+.table > tbody td:nth-child(3) {
+  text-align: right;
+}
+
+.right-align {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.group > .right-align > a {
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+}
+
+a:hover,
+a:visited,
+a:active,
+a:link {
+  text-decoration: none;
+}

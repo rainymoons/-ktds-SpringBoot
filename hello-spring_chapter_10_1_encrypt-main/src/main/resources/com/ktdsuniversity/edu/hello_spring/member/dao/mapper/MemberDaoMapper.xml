@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktdsuniversity.edu.hello_spring.member.dao.MemberDao">
+
+	<insert id="insertNewMember" parameterType="com.ktdsuniversity.edu.hello_spring.member.vo.RegistMemberVO">
+		INSERT INTO MEMBERS
+         (EMAIL
+        , NAME
+        , PASSWORD
+        , SALT)
+        VALUES
+         (#{email}
+        , #{name}
+        , #{password}
+        , #{salt})
+	</insert>
+
+	<select id="selectEmailCount" parameterType="string" resultType="_int">
+		SELECT COUNT(1)
+          FROM MEMBERS
+         WHERE EMAIL = #{_parameter} 
+	</select>
+
+	<select id="selectSalt" parameterType="string" resultType="string">
+		SELECT SALT
+          FROM MEMBERS
+         WHERE EMAIL = #{_parameter} 
+	</select>
+	
+	<select id="selectOneMember" 
+	        parameterType="com.ktdsuniversity.edu.hello_spring.member.vo.LoginMemberVO" 
+	        resultType="com.ktdsuniversity.edu.hello_spring.member.vo.MemberVO">
+		SELECT EMAIL
+		     , NAME
+		     , PASSWORD
+		     , SALT
+		     , LOGIN_FAIL_COUNT
+		     , TO_CHAR(LATEST_LOGIN_FAIL_DATE, 'YYYY-MM-DD HH24:MI:SS') LATEST_LOGIN_FAIL_DATE
+		     , LATEST_LOGIN_IP
+		     , TO_CHAR(LATEST_LOGIN_SUCCESS_DATE, 'YYYY-MM-DD HH24:MI:SS') LATEST_LOGIN_SUCCESS_DATE
+		  FROM MEMBERS
+		 WHERE EMAIL = #{email} 
+		   AND PASSWORD = #{password} 
+	</select>
+
+</mapper>

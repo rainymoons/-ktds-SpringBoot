@@ -17,7 +17,6 @@ public class HelloBootServiceImpl implements HelloBootService {
 	@Autowired
 	HelloBootDao helloBootDao;
 	
-	
 	// 생성자로 체크.
 	public HelloBootServiceImpl() {
 		System.out.println("HelloBootServiceImpl 인스턴스 생성함.");

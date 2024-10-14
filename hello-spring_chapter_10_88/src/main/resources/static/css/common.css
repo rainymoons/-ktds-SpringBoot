@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+div.grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: minmax(28px, auto) minmax(28px, auto) 28px 320px 1fr;
+  row-gap: 10px;
+}
+
+div.grid-view-board {
+  grid-template-rows: repeat(6, 28px) 320px 1fr;
+}
+
+div.grid > div.btn-group {
+  grid-column: 1 / -1;
+}
+
+div.grid div.right-align {
+  text-align: right;
+}
+
+label {
+  padding-left: 10px;
+}
+
+button,
+input,
+textarea {
+  padding: 10px;
+}
+
+input[type="file"] {
+  padding: 0;
+}
+
+textarea {
+  height: 300px;
+}
+
+.right-align > a {
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	margin-left: 1rem;
+}
+
+div.error {
+	font-size: 0.8rem;
+	color: #a00;
+}
+

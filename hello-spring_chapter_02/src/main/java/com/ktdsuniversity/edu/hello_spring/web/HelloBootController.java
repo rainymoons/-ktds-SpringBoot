@@ -107,5 +107,5 @@ public class HelloBootController {
 	 * controller에 파라미터가 존재할 경우 servlet이 해당하는 파라미터를 넣어준다. -> Java Reflection(메소드를 직접호출하지 않더라도 메서드를 호출시키는 기능. 파라미터가 무엇인지 타입이 무엇인지 체크 가능)
 	 * 
 	 */
-	 
+
 }

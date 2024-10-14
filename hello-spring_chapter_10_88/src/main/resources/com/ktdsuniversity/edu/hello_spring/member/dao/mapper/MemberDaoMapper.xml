@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktdsuniversity.edu.hello_spring.member.dao.MemberDao">
+
+	<insert id="com.ktdsuniversity.edu.hello_spring.member.dao.MemberDao.insertNewMember" parameterType="com.ktdsuniversity.edu.hello_spring.member.vo.RegistMemberVO">
+		INSERT INTO MEMBERS
+         (EMAIL
+        , NAME
+        , PASSWORD)
+        VALUES
+         (#{email}
+        , #{name}
+        , #{password})
+	</insert>
+
+	<select id="com.ktdsuniversity.edu.hello_spring.member.dao.MemberDao.selectEmailCount" parameterType="string" resultType="_int">
+		SELECT COUNT(1)
+          FROM MEMBERS
+         WHERE EMAIL = #{_parameter} 
+	</select>
+
+</mapper>

@@ -57,20 +57,23 @@ public class BoardServiceImpl implements BoardService {
 		
 		// 파일 업로드 처리
 		MultipartFile file = writeBoardVO.getFile();
-		
+		// MultiparFile 객체를 받아 fileHandler.storeFile 메서드를 통해 파일을 저장한다.
+		// 저장된 파일이 있으면 storeResultVO에 결과가 저장된다.
 		StoreResultVO storeResultVO = this.fileHandler.storeFile(file); // 업로드를 했으면 파일이 있고 없으면 Null
 		if (storeResultVO != null) {
+			// storeResultVO가 null이 아니면(즉, 파일이 업로드되었으면) 난독화된 파일 이름과 원본 파일 이름을 writeBoardVO에 설정
 			writeBoardVO.setFileName(storeResultVO.getObfuscatedFileName());
 			writeBoardVO.setOriginFileName(storeResultVO.getOriginFileName());
 		}
-		
-		int result = this.boardDao.insertNewBoard(writeBoardVO); 
+		// DB에 게시글 저장
+		int result = this.boardDao.insertNewBoard(writeBoardVO);
+		// 삽입 성공 여부 반환
 		return result == 1;
 	}
 	
 	@Override
 	public BoardVO getOneBoard(int id, boolean isIncrease) {
-		
+
 		if(isIncrease) {
 			// 파라미터로 전달 받은 게시글의 조회 수 증가
 			// updateCount에는 DB에 업데이트한 게시글의 수를 반환
@@ -112,12 +115,18 @@ public class BoardServiceImpl implements BoardService {
 			modifyBoardVO.setFileName(storeResultVO.getObfuscatedFileName());
 			modifyBoardVO.setOriginFileName(storeResultVO.getOriginFileName());
 		}
-		
+		// 게시글을 수정하고 수정 수행 상태를 나타내는 updateCount 변수 선언 후 값을 담는다.
 		int updateCount = boardDao.updateOneBoard(modifyBoardVO);
 		
 		if (updateCount > 0 ) {
-			//this.fileHandler.deleteFile("지워야하는 파일의 이름"); // 얘의 정보를 가져와야 한다. 업로드 하기 전의 정보 (DB) -> update하기 전에 DB에서 셀렉트
-			this.fileHandler.deleteFile(boardVO.getFileName());
+			//this.fileHandler.deleteFile("지워야하는 파일의 이름");
+			// 얘의 정보를 가져와야 한다. 업로드 하기 전의 정보 (DB) -> update하기 전에 DB에서 셀렉트
+
+			// 기존 파일 정보로 기존 파일 삭제
+			this.fileHandler.deleteFile(boardVO.getFileName()); // 기존 파일 삭제
+
+			// 게시글 수정 후, 수정된 게시글 정보를 다시 조회할 필요가 있다면 여기서 조회
+			boardVO = boardDao.selectOneBoard(modifyBoardVO.getId()); // 최신 데이터 조회
 		}
 		return updateCount > 0;
 	}
@@ -128,7 +137,8 @@ public class BoardServiceImpl implements BoardService {
 		BoardVO boardVO = boardDao.selectOneBoard(id);
 		
 		int deleteCount = this.boardDao.deleteOneBoard(id);
-		if(deleteCount > 0) {
+		if (deleteCount > 0) {
+			// boardVO.getFileName() -> 업데이트 하기 전 파일명
 			this.fileHandler.deleteFile(boardVO.getFileName());
 		}
 		return deleteCount > 0;

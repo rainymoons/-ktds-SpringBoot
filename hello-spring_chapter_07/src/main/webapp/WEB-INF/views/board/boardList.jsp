@@ -24,20 +24,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				<!-- 
-					BoardListVO boardListVO = new BoardListVO();
-					List<BoardVO> boardList = boardListVO.getBoardList();
-					for (BoardVO board : boardList) 
-					             = bar     = items   이걸 아래에 구현
-					             forEach
-				 -->
-				 
-				 <!--  
-				 	${boardListVO.boardList} 가 비어있지 않다면,
-				 	forEach를 통해 목록을 보여주고, 그렇지 않다면
-				 	"게시글이 없습니다."를 보여준다.
-				 	-> choose when otherwise
-				  -->
+			<!--
+				BoardListVO boardListVO = new BoardListVO();
+				List<BoardVO> boardList = boardListVO.getBoardList();
+				for (BoardVO board : boardList)
+							 = bar     = items   이걸 아래에 구현
+							 forEach		 -->
+			 <!--
+				$ {boardListVO.boardList} 가 비어있지 않다면, forEach를 통해 목록을 보여주고,
+				 그렇지 않다면 "게시글이 없습니다."를 보여준다.
+				-> choose when otherwise
+			  -->
 			  	<c:choose>
 			  		<c:when test="${not empty boardListVO.boardList}"> <!-- 리스트가 비어있다면(아닐경우 not) -->
 			  			<c:forEach items="${boardListVO.boardList}" var="board">
@@ -45,8 +42,7 @@
 								<td>${board.id}</td>
 								<td>
 									<a href="/board/view?id=${board.id}">
-										${board.subject}
-									 </a>
+										${board.subject} </a>
 								</td>
 								<td>${board.email}</td>
 								<td>${board.viewCnt}</td>
@@ -55,7 +51,7 @@
 							</tr>
 						</c:forEach>	
 			  		</c:when>
-			  		<c:otherwise>
+					<c:otherwise>
 			  			<tr>
 			  				<td colspan="6">게시글이 없습니다.</td>
 			  			</tr>	

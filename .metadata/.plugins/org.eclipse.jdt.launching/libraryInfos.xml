@@ -13,5 +13,6 @@
         </endorsedDirs>
     </libraryInfo>
     <libraryInfo home="/opt/homebrew/Cellar/openjdk@17/17.0.12/libexec/openjdk.jdk/Contents/Home" version="17.0.12"/>
+    <libraryInfo home="/Users/moomin/Library/Java/JavaVirtualMachines/openjdk-23/Contents/Home" version="23"/>
     <libraryInfo home="/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_21.0.4.v20240802-1551/jre" version="21.0.4"/>
 </libraryInfos>

@@ -66,7 +66,8 @@ public class BoardController {
 	
 	// form에는 제목, 이메일, 내용만 있음. 아이디가 없으므로 id를 전달해줘야함.
 	@PostMapping("/board/modify/{id}")
-	public String doModifyOneBoard(@PathVariable int id, @Valid ModifyBoardVO modifyBoardVO, BindingResult bindingResult, Model model) {
+	public String doModifyOneBoard(@PathVariable int id, @Valid ModifyBoardVO modifyBoardVO,
+									BindingResult bindingResult, Model model) {
 		
 		if (bindingResult.hasErrors()) {
 			model.addAttribute("boardVO", modifyBoardVO);
