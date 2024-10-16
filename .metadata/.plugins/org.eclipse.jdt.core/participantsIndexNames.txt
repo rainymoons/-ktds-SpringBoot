@@ -41,6 +41,8 @@ INDEX VERSION 1.134
 /hello-spring_chapter_10_1_encrypt/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1272293915.index
 /hello-spring_chapter_05_test/src/main/java
+/Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/288772342.index
+/hello-spring_chapter_10_16_pagination/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4106943082.index
 /todo-own/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/28625331.index
@@ -63,6 +65,8 @@ INDEX VERSION 1.134
 /hello-spring_chapter_10_14_transaction/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/127870219.index
 /hello-spring_chapter_10_15_transaction/src/main/java
+/Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/347981760.index
+/hello-spring_chapter_10_16_pagination/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3735387790.index
 /hello-spring_chapter_04_test/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1413893828.index
@@ -107,6 +111,8 @@ INDEX VERSION 1.134
 /hello-spring_chapter_10_2_login-main/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3943040866.index
 /hello-spring_chapter_10_88/src/main/java
+/Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/57935639.index
+/hello-spring_chapter_10_16_pagination/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3021175290.index
 /hello-spring_chapter_10_4_login_block_process_h/src/main/java
 /Users/moomin/Documents/Workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4184914491.index

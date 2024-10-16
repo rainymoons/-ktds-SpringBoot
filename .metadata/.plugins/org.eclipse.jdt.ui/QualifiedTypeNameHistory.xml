@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
-    <fullyQualifiedTypeName name="org.mybatis.spring.SqlSessionTemplate"/>
-    <fullyQualifiedTypeName name="org.springframework.test.context.junit.jupiter.SpringExtension"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.extension.ExtendWith"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Import"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.dao.impl.BoardDaoImpl"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.vo.WriteBoardVO"/>
     <fullyQualifiedTypeName name="org.mybatis.spring.boot.test.autoconfigure.MybatisTest"/>
@@ -24,15 +19,10 @@
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.vo.BoardVO"/>
     <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
     <fullyQualifiedTypeName name="jakarta.validation.constraints.Size"/>
-    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotBlank"/>
     <fullyQualifiedTypeName name="jakarta.validation.constraints.Email"/>
-    <fullyQualifiedTypeName name="org.mybatis.spring.support.SqlSessionDaoSupport"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Conditional"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.HandlerInterceptor"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.beans.CheckDuplicateLoginInterceptor"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.access.vo.AccessLogVO"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.beans.AddAccessLogHistoryInterceptor"/>
@@ -40,7 +30,6 @@
     <fullyQualifiedTypeName name="org.apache.poi.xssf.streaming.SXSSFWorkbook"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Workbook"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Sheet"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.util.UUID"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
@@ -49,7 +38,6 @@
     <fullyQualifiedTypeName name="org.apache.commons.collections4.Get"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.exceptions.PageNotFoundException"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.exceptions.handler.GlobalExceptionHandler"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.exceptions.FileNotExistsException"/>
@@ -58,6 +46,18 @@
     <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.exceptions.UserIdentifyNotMatchException"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Pointcut"/>
     <fullyQualifiedTypeName name="org.mybatis.logging.LoggerFactory"/>
-    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.bbs.dao.ReplyDao"/>
+    <fullyQualifiedTypeName name="org.mybatis.spring.support.SqlSessionDaoSupport"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.exceptions.PageNotFoundException"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotBlank"/>
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.utils.ErrorMapUtil"/>
+    <fullyQualifiedTypeName name="com.ktdsuniversity.edu.hello_spring.common.exceptions.AjaxException"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

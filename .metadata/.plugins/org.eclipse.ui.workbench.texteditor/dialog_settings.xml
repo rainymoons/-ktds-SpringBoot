@@ -8,14 +8,14 @@
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="수정일"/>
+			<item value="createResult"/>
 			<item value="readMemeber"/>
 			<item value="releasing"/>
 			<item value="real"/>
 			<item value="걸린"/>
 			<item value="\"/>
 			<item value="걸린 시간"/>
-			<item value="아이디 또는 "/>
-			<item value="update"/>
 		</list>
 		<list key="replacehistory">
 		</list>
