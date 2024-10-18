@@ -1,0 +1,148 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>batch</groupId>
+    <artifactId>batch</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- Build an executable JAR -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>com.ktdsuniversity.edu.batch.BatchMain</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>20</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+    	<!-- MyBatis 관련 디펜던시 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.6</version>
+        </dependency>
+        
+        <!-- JDBC 관련 라이브러리 -->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc10</artifactId>
+            <version>19.20.0.0</version>
+        </dependency>
+        
+        <!--
+			DBCP: DataBase Connection Pool = hikari pool. spring은 총 10개를 미리 만들어둔다.
+				  ("org.apache.commons.dbcp.BasicDataSource"에서 생성)
+			Pool: 볼풀장
+			
+			데이터베이스에 접속할 DB Session들을 미리 생성해놓고 스프링 빈에 등록해둔다.
+			데이터베이스 세션이 필요할 때 마다 DBCP에 등록된 여러 빈 중 하나를 대여해서 사용하고
+			사용이 끝난 빈은 다시 반납한다.
+			
+			SQL 하나를 사용하기 위해서는 DB Session을 생성(DB에 연결)을 하고 쿼리를 수행한다.
+			DB Session을 생성하는 시간이 오래걸린다.
+			DB Session 하나로 동시 접속자들의 요청을 처리하면 병목현상이 발생한다.(Connection TimeOut) 
+		-->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+        
+        <!-- 배치 라이브러리
+        	 일정 주기 혹은 지정된 시간에 지정된 작업을 수행하도록 하는 라이브러리
+        	 Windows Scheduler
+        	 Linux/Unix/macOS Crontab -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.5.0-rc1</version>
+        </dependency>
+        
+        <!-- Spring Legacy 관련 라이브러리 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+        
+        <!-- Logging 관련 라이브러리 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.11</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+
+        <!-- Spring AOP / Transaction 관련 라이브러리 -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.22.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+    </dependencies>
+</project>
