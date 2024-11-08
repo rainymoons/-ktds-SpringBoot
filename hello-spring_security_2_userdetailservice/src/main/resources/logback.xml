@@ -1,0 +1,39 @@
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender>
+  
+  <!-- Rolling File Appender -->
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+  
+    <!-- 로그파일을 작성할 폴더를 지정하는 것. -->
+    <file>/Users/moomin/Downloads/logs/hellospring.log</file>
+    
+    <!-- 파일을 언제 교체할지 정하는 부분. 아래는 시간을 기준으로 관리하는 것.-->
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    
+      <!-- daily rollover yyyy-MM-dd HH-mm으로 하면 분단위 롤링-->
+      <fileNamePattern>/Users/moomin/Downloads/logs/hellospring.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+      <!-- keep 30 days' worth of history capped at 3GB total size
+      	   30일 전의 로그는 지운다. /파일들의 총 용량이 3GB를 넘어서는 안된다. 넘어서면 가장 오래된 로그부터 지움. -->
+      <!-- <maxHistory>30</maxHistory>
+      <totalSizeCap>3GB</totalSizeCap> 근데 로그는 함부러 지우면 안되기 때문에 사용하지 않음. -->
+
+    </rollingPolicy>
+
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender> 
+
+  <root level="DEBUG">
+  	<!-- console과 file에 둘다 로그가 쌓이도록 설정. -->
+  	<appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root>
+  </configuration>

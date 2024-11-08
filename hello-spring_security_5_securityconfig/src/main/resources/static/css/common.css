@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+div.grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 28px 1fr minmax(30px, auto) 28px ;
+  row-gap: 10px;
+}
+
+div.grid-board-list {
+	
+}
+
+div.grid-view-board {
+  grid-template-rows: repeat(6, 28px) 320px 1fr;
+}
+
+div.grid > div.btn-group {
+  grid-column: 1 / -1;
+}
+
+.show-list {
+	text-align: right;
+}
+
+.right-align {
+  text-align: right;
+}
+
+label {
+  padding-left: 10px;
+}
+
+button,
+input,
+textarea {
+  padding: 10px;
+}
+
+input[type="file"] {
+  padding: 0;
+}
+
+textarea {
+  height: 300px;
+}
+
+.right-align > a {
+
+	color: rgb(42, 33, 34);
+	padding: 10px;
+	margin-left: 1rem;
+}
+
+div.error {
+	font-size: 0.8rem;
+	color: #a00;
+}
+
+.replies {
+	grid-column: 1 / -1;
+}
+.replies > .write-reply {
+	display: grid;
+	grid-template-columns: 1fr 80px;
+	/* 없을때는 0rem 있을떄는 auto : 댓글 에러 메세지*/
+	grid-template-rows: minmax(0rem, auto) 1fr 40px;
+	gap: 10px;
+	align-items: center;
+	
+	margin-top: 10px;
+}
+.replies > .write-reply > .txt-reply {
+	height: 150px;
+	grid-column: 1 / -1;
+}
+.replies > .reply-items {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	gap: 10px;
+}
+
+.page-nav {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.page-nav > li {
+	list-style: none;
+	padding: 0.5rem;
+}
+
+.page-nav > li.active > a {
+	color: #F00;
+	font-weight: 900;
+}

@@ -26,7 +26,4 @@ public class AccessLogDaoImpl extends SqlSessionDaoSupport implements AccessLogD
 	public int selectLoginFailCount(String ip) {
 		return this.getSqlSession().selectOne(NAMESPACE + ".selectLoginFailCount", ip);
 	}
-	
-	
-	
 }

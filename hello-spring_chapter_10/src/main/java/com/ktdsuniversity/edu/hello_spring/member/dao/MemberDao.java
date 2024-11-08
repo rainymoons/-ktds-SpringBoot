@@ -11,7 +11,6 @@ public interface MemberDao {
 	 */
 	public int getEmailCount(String email);
 
-	
 	/**
 	 * 회원 가입 쿼리를 실행한다.
 	 * @param createMemberVO 사용자가 입력한 회원 정보

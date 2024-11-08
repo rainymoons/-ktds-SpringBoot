@@ -24,11 +24,4 @@ public class LoginMemberVO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
-
-
-	
-	
 }

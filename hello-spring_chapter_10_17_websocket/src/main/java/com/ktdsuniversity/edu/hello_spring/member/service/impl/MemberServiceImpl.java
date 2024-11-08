@@ -72,7 +72,7 @@ public class MemberServiceImpl implements MemberService{
 			accessLogVO.setAccessType("LOGIN");
 			accessLogVO.setAccessUrl( RequestUtil.getRequest().getRequestURI() );
 			accessLogVO.setAccessMethod( RequestUtil.getRequest().getMethod().toUpperCase() );
-			accessLogVO.setAccessIp( RequestUtil.getIp() );
+			accessLogVO.setAccessIp( RequestUtil.getIp());
 			
 			// 실패에 대한 Log
 			this.accessLogDao.insertNewAccessLog(accessLogVO);

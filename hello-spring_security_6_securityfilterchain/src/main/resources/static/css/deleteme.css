@@ -1,0 +1,15 @@
+@charset "UTF-8";
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+a {
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	margin-left: 1rem;
+}

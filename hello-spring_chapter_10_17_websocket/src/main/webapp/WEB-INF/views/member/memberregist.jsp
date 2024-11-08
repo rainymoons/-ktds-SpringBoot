@@ -23,9 +23,7 @@ uri="http://www.springframework.org/tags/form" %>
             value="${registMemberVO.email}" />
           <form:errors path="email" element="div" cssClass="error" />
           <c:if test="${not empty message}">
-          <div class="error">
-          ${message}
-          </div>
+          <div class="error"> ${message} </div>
           </c:if>
         </div>
         <label for="name">이름</label>

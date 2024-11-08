@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Common">
+	<!-- BoardDaoMapper에서 가져 -->
+	<sql id="pagination_header">
+		SELECT *
+          FROM (SELECT ROWNUM RNUM
+                     , S.*
+                  FROM (
+	</sql>
+	
+	<sql id="pagination_footer">
+					   ) S
+				 WHERE ROWNUM <![CDATA[<=]]> ( #{pageNo} + 1) * #{listSize} ) <!-- SearchBoardVO의 값. 게시글의 마지막번호 --> 
+		 WHERE RNUM <![CDATA[>=]]> #{pageNo} * #{listSize} + 1 <!-- SearchBoardVO의 값. 게시글의 시작 번호 -->
+	</sql>
+	
+</mapper>

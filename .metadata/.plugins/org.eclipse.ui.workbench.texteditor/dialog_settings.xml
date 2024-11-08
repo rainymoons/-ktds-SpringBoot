@@ -4,18 +4,19 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="sendToOneSession"/>
+		<item key="selection" value="security pass"/>
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
-			<item value="sendToOneSession"/>
-			<item value="UUID"/>
-			<item value="사용자의"/>
-			<item value="websocket"/>
-			<item value="수정일"/>
-			<item value="createResult"/>
-			<item value="readMemeber"/>
-			<item value="releasing"/>
+			<item value="security pass"/>
+			<item value="newPhn.val"/>
+			<item value="initializ"/>
+			<item value="initializeIntlTelInput"/>
+			<item value="휴대전화번호를 올바르게"/>
+			<item value="$(&quot;.btn-subit&quot;).prop(&quot;disabled&quot;, true);"/>
+			<item value="error"/>
+			<item value="factor"/>
+			<item value="h4"/>
 		</list>
 		<list key="replacehistory">
 		</list>

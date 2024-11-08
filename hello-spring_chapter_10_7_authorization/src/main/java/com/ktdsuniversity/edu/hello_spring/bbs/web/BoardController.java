@@ -110,7 +110,7 @@ public class BoardController {
 		if (loginMemberVO == null) {
 			return "redirect:/member/login";
 		}
-		
+
 		// set ID
 		modifyBoardVO.setId(id);
 		modifyBoardVO.setEmail(loginMemberVO.getEmail());
@@ -126,6 +126,17 @@ public class BoardController {
 			model.addAttribute("boardVO", modifyBoardVO);
 			return "board/boardmodify";
 		}
+	}
+
+	@PostMapping("/board/modify/{id}")
+	public String doModifyBoard1(@PathVariable int id, Model model, ModifyBoardVO modifyBoardVO,
+								@SessionAttribute(value="_LOGIN_USER_", required=false) MemberVO loginMemberVO){
+		modifyBoardVO.setId(id);
+		modifyBoardVO.setEmail(loginMemberVO.getEmail());
+
+		return "redirect:/board/view?id=" + id;
+
+
 	}
 
 	@GetMapping("/board/delete/{id}")

@@ -59,7 +59,7 @@ public class MemberController {
 		
 		boolean isAvailableEmail = this.memberService.checkAvailableEmail(email);
 		
-		Map<String, Object> response = new HashMap<String, Object>();
+		Map<String, Object> response = new HashMap<>();
 		response.put("email", email);
 		response.put("available", isAvailableEmail);
 		return response;

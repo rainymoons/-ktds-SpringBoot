@@ -43,8 +43,8 @@ public class BoardController {
 
 	@PostMapping("/board/write")
 	public String doCreateNewBoard(@Valid WriteBoardVO writeBoardVO // @Valid WriteBoardVO 의 Validation Check 수행
-			, BindingResult bindingResult // @Valid의 실패 결과만 할당 받는다.
-			, Model model) {
+								   , BindingResult bindingResult // @Valid의 실패 결과만 할당 받는다.
+			                       , Model model) {
 
 		if (bindingResult.hasErrors()) {
 			model.addAttribute("writeBoardVO", writeBoardVO);

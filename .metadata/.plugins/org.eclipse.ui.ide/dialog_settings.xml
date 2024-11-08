@@ -42,6 +42,16 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/moomin/MATE/11.6/MATE_BE"/>
+			<item value="/Users/moomin/MATE/11.4/MATE_BE"/>
+			<item value="/Users/moomin/MATE/11.2/MATE_BE"/>
+			<item value="/Users/moomin/MATE/10.28/MATE_BE"/>
+			<item value="/Users/moomin/MATE/10.27-1/MATE_BE"/>
+			<item value="/Users/moomin/MATE/10.27/MATE_BE"/>
+			<item value="/Users/moomin/MATE/10.222/MATE_BE"/>
+			<item value="/Users/moomin/MATE/10.23/MATE_BE"/>
+			<item value="/Users/moomin/MATE/10.22/MATE_BE"/>
+			<item value="/Users/moomin/MATE/10.18user"/>
 			<item value="/Users/moomin/Downloads/batch-exam-master"/>
 			<item value="/Users/moomin/Documents/Workspace/hello-spring_chapter_10_1_encrypt"/>
 			<item value="/Users/moomin/Documents/Workspace/todo-list"/>
@@ -52,8 +62,8 @@
 			<item value="/Users/moomin/Documents/Workspace/hello-spring_chapter_10_copy-main"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="427"/>
-			<item key="DIALOG_Y_ORIGIN" value="89"/>
+			<item key="DIALOG_X_ORIGIN" value="353"/>
+			<item key="DIALOG_Y_ORIGIN" value="20"/>
 			<item key="DIALOG_WIDTH" value="880"/>
 			<item key="DIALOG_HEIGHT" value="604"/>
 			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
@@ -67,7 +77,7 @@
 	</section>
 	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode/&gt;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode path=&quot;/Mate/src/main/resources/com/mate/access/dao/mapper/AccessLogDaoMapper.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/Mate/src/main/java/com/mate/user/dao/GuideDao.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/Mate/src/main/java/com/mate/user/web/GuideController.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/Mate/src/main/java/com/mate/common/beans/FileHandler.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/Mate/src/main/java/com/mate/common/beans/WebConfig.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/Mate/src/main/webapp/WEB-INF/views/guidetour/Modal.jsp&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
 		<item key="ShowDerived" value="false"/>
 		<item key="FilterByLocation" value="false"/>
 		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
