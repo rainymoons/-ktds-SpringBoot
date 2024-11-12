@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%> <%@ taglib prefix="form"
-uri="http://www.springframework.org/tags/form" %> <%@ taglib prefix="c"
+pageEncoding="UTF-8"%> 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
+<%@ taglib prefix="c"
 uri="jakarta.tags.core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,6 +20,9 @@ uri="jakarta.tags.core" %>
       method="post"
       action="/member/security/login"
     >
+    <!-- csrf 설정 -->
+    <sec:csrfInput/>
+
       <!-- nextURL 설정. 로그인 성공 후 nextUrl로 자동이동 설정-->
       <input type="hidden" name="nextUrl" />
 

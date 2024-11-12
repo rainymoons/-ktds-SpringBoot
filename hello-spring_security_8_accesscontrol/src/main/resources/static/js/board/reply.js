@@ -124,6 +124,13 @@ function createReply(boardId) {
 		params.parentReplyId = parentReplyId;
 	}
 	
+	// ajax.parameter에 csrf 토큰을 넣어준다.(웹에서 보고 체큰)
+	var csrfParamName = $("meta[name='_csrf_parameter']").attr("content");
+	var csrfToken = $("meta[name='_csrf']").attr("content");
+	// params에 받아온 토큰과 토큰 이름을 넣어줌
+	params[csrfParamName] = csrfToken;
+	
+	// 이곳에 csrf 토큰을 넣어줘야 한다.
     $.post(url
 		, params
 		, function(createResult) {

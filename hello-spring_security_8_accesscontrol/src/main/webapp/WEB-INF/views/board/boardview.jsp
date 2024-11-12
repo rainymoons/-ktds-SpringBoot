@@ -7,6 +7,9 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- AJAX를 위한 CSRF Token -->
+    <sec:csrfMetaTags/>
+    
     <meta charset="UTF-8" />
     <title>게시글 조회</title>
     <link rel="stylesheet" type="text/css" href="/css/common.css" />

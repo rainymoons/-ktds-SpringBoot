@@ -69,8 +69,8 @@ public class SecurityConfig {
 		// ""경로의 모든 url을 무시하겠다.(security가 경로에 대해 개입하지 않음)
 		return (web) -> web.ignoring()
 				.requestMatchers("/WEB-INF/views/**")
-				.requestMatchers("/member/login")
-				.requestMatchers("/member/regist/**") // 중복검사 등을 수행하기 위해 ** (시큐리티가 개입하지 못하게)
+				//.requestMatchers("/member/login")
+				//.requestMatchers("/member/regist/**") // 중복검사 등을 수행하기 위해 ** (시큐리티가 개입하지 못하게) -> csrf때문에 막음. 
 				.requestMatchers("/error/**")
 				.requestMatchers("/favicon.ico")
 				.requestMatchers("/member/**-delete-me") // 회원탈퇴시 리다이렉트되는 페이지에 대해 막아준다.
@@ -97,7 +97,9 @@ public class SecurityConfig {
 			// /board/list는 인증 여부와 관계없이 접근이 가능하다.
 			// permitAll()은 <sec:*></sec:*> securityJSTL이 사용 가능함. 스프링 시큐리티가 항상 개입하기 때문.
 			// Controller에서 Authentication 객체에 접근이 가능하다.
-			httpRequest.requestMatchers("/board/list").permitAll() // permitAll() 모든 접근 가능(인증없이도 접근 가능)
+			httpRequest.requestMatchers("/member/login").permitAll()
+						.requestMatchers("member/regist/**").permitAll()
+						.requestMatchers("/board/list").permitAll() // permitAll() 모든 접근 가능(인증없이도 접근 가능)
 						// /board/excel/download URL은 ROLE_ADMIN만 접근할 수 있다. (ROLE로 접근)
 						// ROLE_ADMIN이 아니라 ADMIN으로 작성. 시큐리티가 알아서 ROLE_을 붙여서 검색. -> 역할로 접근
 //					   .requestMatchers("/board/excel/download").hasRole("ADMIN")
@@ -109,7 +111,7 @@ public class SecurityConfig {
 					   .requestMatchers("/board/write").hasAuthority("ARTICLE_CREATE")
 					   .requestMatchers("/board/view").hasAuthority("ARTICLE_READ")
 					   // postMapping에 대해서만 권한을 주고 싶다. 댓글을 읽어올수는 있어야 하니까.
-					   .requestMatchers(AntPathRequestMatcher.antMatcher(HttpMethod.POST, "/board/reply")).hasAuthority("REPLY_CREATE")
+					   .requestMatchers(AntPathRequestMatcher.antMatcher(HttpMethod.POST, "/board/reply/**")).hasAuthority("REPLY_CREATE")
 					   .anyRequest().authenticated()
 		);
 		
