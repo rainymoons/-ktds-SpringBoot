@@ -4,19 +4,18 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="security pass"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
-			<item value="security pass"/>
-			<item value="newPhn.val"/>
-			<item value="initializ"/>
-			<item value="initializeIntlTelInput"/>
-			<item value="휴대전화번호를 올바르게"/>
-			<item value="$(&quot;.btn-subit&quot;).prop(&quot;disabled&quot;, true);"/>
-			<item value="error"/>
-			<item value="factor"/>
-			<item value="h4"/>
+			<item value="container"/>
+			<item value="issue"/>
+			<item value="getUserInfo"/>
+			<item value="verify"/>
+			<item value="document.addEventListener(&quot;DOMContentLoaded&quot;, function() {"/>
+			<item value="삭제"/>
+			<item value="toggle"/>
+			<item value="hidden"/>
 		</list>
 		<list key="replacehistory">
 		</list>
