@@ -1,0 +1,50 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows:
+    minmax(28px, auto) minmax(28px, auto) minmax(28px, auto) minmax(28px, auto)
+    1fr;
+  row-gap: 10px;
+}
+
+.grid > div.btn-group {
+  display: grid;
+  grid-column: 1 / -1;
+}
+
+.grid div.right-align {
+  text-align: right;
+}
+
+label {
+  padding-left: 10px;
+}
+
+button,
+input {
+  padding: 10px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+}
+
+div.error {
+  font-size: 0.8rem;
+  color: #a00;
+}
+
+.available {
+  background-color: rgba(173, 229, 173, 0.533);
+}
+
+.unusable {
+  background-color: rgba(236, 181, 181, 0.533);
+}
