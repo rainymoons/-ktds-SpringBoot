@@ -14,19 +14,24 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import com.ktdsuniversity.edu.hello_spring.common.beans.security.jwt.JsonWebTokenAuthenticationFilter;
 import com.ktdsuniversity.edu.hello_spring.member.dao.MemberDao;
 
 /**
  * 
  */
 @Configuration // Bean 설정을 위한 애노테이션
-@EnableWebSecurity // SpringSecurity 활성화 (인증 절차를 위한 활성화, provider, passwordEncoder, service를 사용하기 위한)
+@EnableWebSecurity(debug = true) // SpringSecurity 활성화 (인증 절차를 위한 활성화, provider, passwordEncoder, service를 사용하기 위한)
 public class SecurityConfig {
 
 	@Autowired // configuration이 있으므로 가능
 	private MemberDao memberDao;
+	
+	@Autowired
+	private JsonWebTokenAuthenticationFilter jsonWebTokenAuthenticationFilter; 
 	
 	// 1. SecurityUserDetailService를 Bean으로 등록
 	@Bean
@@ -40,7 +45,6 @@ public class SecurityConfig {
 	PasswordEncoder securityPasswordEncoder() {
 		return new SecurityPasswordEncoder();
 	}
-	
 	
 	// 3. SecurityAuthenticationProvider를 Bean으로 등록 -> 인증 절차를 변경한 것.
 	@Bean
@@ -88,6 +92,10 @@ public class SecurityConfig {
 	@Bean
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		
+		// 기본적인 Filter를 진행시키고 그 다음에 jsonWebTokenAuthenticationFilter를 동작시켜라.
+		http.addFilterAfter(this.jsonWebTokenAuthenticationFilter, BasicAuthenticationFilter.class);
+		// UsernamePasswordAuthenticationFilter 가 BasicAuthenticationFilter
+		
 		/*
 		 * URL 패턴별로 인증을 필요로 하는지? 혹은 인증이 필요 없는지? 혹은 특정 역할(ROLE)만 접근이 가능한지?
 		 * 혹은 특정 권한(Authoirty)만 접근이 가능한지를 명시한다.
@@ -99,6 +107,7 @@ public class SecurityConfig {
 			// Controller에서 Authentication 객체에 접근이 가능하다.
 			httpRequest.requestMatchers("/member/login").permitAll()
 						.requestMatchers("member/regist/**").permitAll()
+						.requestMatchers("/token").permitAll()
 						.requestMatchers("/board/list").permitAll() // permitAll() 모든 접근 가능(인증없이도 접근 가능)
 						// /board/excel/download URL은 ROLE_ADMIN만 접근할 수 있다. (ROLE로 접근)
 						// ROLE_ADMIN이 아니라 ADMIN으로 작성. 시큐리티가 알아서 ROLE_을 붙여서 검색. -> 역할로 접근
@@ -134,7 +143,10 @@ public class SecurityConfig {
 				);
 		
 		// csrf 방어를 하지 않음.
-//		http.csrf(csrf -> csrf.disable());
+		//http.csrf(csrf -> csrf.disable());
+		
+		// CSRF는 활성화 시키되 /token, /api/**에 대해서는 체크하지 않는다.
+		http.csrf(csrf -> csrf.ignoringRequestMatchers("/token", "/api/**"));
 		
 		return http.build(); // SecurityFilterChain 반환.
 	}

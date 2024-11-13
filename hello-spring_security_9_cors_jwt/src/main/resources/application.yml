@@ -28,6 +28,9 @@ mybatis:
 
 # Application 전용 설정 (Spring과 관계 없음)
 app:
+  jwt:
+    issuer: hello-spring-security
+    secret-key: spring-security-secret-key-random-token-key
   multipart:
     base-dir: /Users/moomin/Downloads/uploadfiles
     # 파일명 난독화 설정
