@@ -27,4 +27,5 @@ searchResultIndicationColor=196,196,196
 searchResultTextStyle=BOX
 secondaryIPColor=227,227,227
 showWhitespaceCharacters=true
+spacesForTabs=true
 writeOccurrenceIndicationColor=240,216,168
